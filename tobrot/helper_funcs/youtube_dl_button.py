@@ -97,6 +97,7 @@ async def youtube_dl_call_back(bot, update):
     if tg_send_type == "audio":
         command_to_exec = [
             "yt-dlp",
+            "--no-check-certificate", 
             "-c",
             "--prefer-ffmpeg",
             "--extract-audio",
@@ -119,6 +120,7 @@ async def youtube_dl_call_back(bot, update):
 
         command_to_exec = [
             "yt-dlp",
+            "--no-check-certificate", 
             "-c",
             "--embed-subs",
             "-f",
